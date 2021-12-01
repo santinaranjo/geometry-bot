@@ -1,4 +1,4 @@
-# platzi-curso-practico-javascript
+# geometry-bot
 
 ...
 
@@ -8,3 +8,4 @@
 - Segundo paso: implementar las fórmulas en JavaScript
 - Tercer paso: crear funciones
 - Cuarto paso: integar JS con HTML
+
