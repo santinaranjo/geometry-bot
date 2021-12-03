@@ -10,8 +10,9 @@ mixin caja(img, nombre, pregunta, id, output, funcionPerimetro, funcionArea)
             span=pregunta
         form(class="box--form" action="")
                 input(class="box--input" id=id type="number") 
-                button(class="box--button" type="button" onclick=funcionPerimetro) Get perimeter 
-                button(class="box--button" type="button" onclick=funcionArea) Get area
+                .box--buttons
+                    button(class="box--button" type="button" onclick=funcionPerimetro) Get perimeter 
+                    button(class="box--button" type="button" onclick=funcionArea) Get area
                 span(id=output)
 
 doctype html
@@ -33,7 +34,7 @@ html(lang="en")
         
         main.main
             +caja(square[0], square[1], square[2], square[3], square[4], square[5], square[6])
-            
+
             section.box
                 .box--title
                     img(src="../media/triangle.png")
@@ -49,8 +50,9 @@ html(lang="en")
                         input(class="box--input" id="InputTriangleBase" type="number")
                         label(for="InputTriangleHeight") Height
                         input(class="box--input" id="InputTriangleHeight" type="number") 
-                        button(class="box--button" type="button" onclick="calcularPerimetroTriangulo()") Get perimeter 
-                        button(class="box--button" type="button" onclick="calcularAreaTriangulo()") Get area
+                        .box--buttons
+                            button(class="box--button" type="button" onclick="calcularPerimetroTriangulo()") Get perimeter 
+                            button(class="box--button" type="button" onclick="calcularAreaTriangulo()") Get area
                         span(id="outputTriangulo")
 
             +caja(circle[0], circle[1], circle[2], circle[3], circle[4], circle[5], circle[6])

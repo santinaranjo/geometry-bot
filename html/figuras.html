@@ -21,8 +21,10 @@
         <div class="box--question"><span>How long is each side of your square?</span></div>
         <form class="box--form" action="">
           <input class="box--input" id="InputCuadrado" type="number"/>
-          <button class="box--button" type="button" onclick="calcularPerimetroCuadrado()">Get perimeter </button>
-          <button class="box--button" type="button" onclick="calcularAreaCuadrado()">Get area</button><span id="outputCuadrado"></span>
+          <div class="box--buttons">
+            <button class="box--button" type="button" onclick="calcularPerimetroCuadrado()">Get perimeter </button>
+            <button class="box--button" type="button" onclick="calcularAreaCuadrado()">Get area</button>
+          </div><span id="outputCuadrado"></span>
         </form>
       </section>
       <section class="box">
@@ -37,8 +39,10 @@
           <input class="box--input" id="InputTriangleBase" type="number">
           <label for="InputTriangleHeight">Height</label>
           <input class="box--input" id="InputTriangleHeight" type="number">
-          <button class="box--button" type="button" onclick="calcularPerimetroTriangulo()">Get perimeter </button>
-          <button class="box--button" type="button" onclick="calcularAreaTriangulo()">Get area</button><span id="outputTriangulo"></span>
+          <div class="box--buttons">
+            <button class="box--button" type="button" onclick="calcularPerimetroTriangulo()">Get perimeter </button>
+            <button class="box--button" type="button" onclick="calcularAreaTriangulo()">Get area</button>
+          </div><span id="outputTriangulo"></span>
         </form>
       </section>
       <section class="box">
@@ -46,8 +50,10 @@
         <div class="box--question"><span>What is the radio of your circle?</span></div>
         <form class="box--form" action="">
           <input class="box--input" id="InputCirculo" type="number"/>
-          <button class="box--button" type="button" onclick="calcularPerimetroCirculo()">Get perimeter </button>
-          <button class="box--button" type="button" onclick="calcularAreaCirculo()">Get area</button><span id="outputCirculo"></span>
+          <div class="box--buttons">
+            <button class="box--button" type="button" onclick="calcularPerimetroCirculo()">Get perimeter </button>
+            <button class="box--button" type="button" onclick="calcularAreaCirculo()">Get area</button>
+          </div><span id="outputCirculo"></span>
         </form>
       </section>
     </main>
