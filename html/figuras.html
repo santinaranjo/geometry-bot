@@ -11,42 +11,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
   </head>
   <body> 
-    <h1>Geometry Bot</h1>
-    <p>Calculare the area or perimeter automatically for this geometric figures</p>
-    <section class="box">
-      <div class="box--title"><img src="../media/square.png"/><span>Square</span></div>
-      <div class="box--question"><span>How long is each side of your square?</span></div>
-      <form class="box--form" action="">
-        <input class="box--input" id="InputCuadrado" type="number"/>
-        <button class="box--button" type="button" onclick="calcularPerimetroCuadrado()">Get perimeter </button>
-        <button class="box--button" type="button" onclick="calcularAreaCuadrado()">Get area</button><span id="outputCuadrado"></span>
-      </form>
-    </section>
-    <section class="box">
-      <div class="box--title"><img src="../media/triangle.png"><span>Triangle</span></div>
-      <div class="box--question"><span>What are the measurements of your triangle?</span></div>
-      <form class="box--form" action="">
-        <label for="InputTriangleSideA">Side A </label>
-        <input class="box--input" id="InputTriangleSideA" type="number">
-        <label for="InputTriangleSideB">Side B</label>
-        <input class="box--input" id="InputTriangleSideB" type="number">
-        <label for="InputTriangleBase">Base</label>
-        <input class="box--input" id="InputTriangleBase" type="number">
-        <label for="InputTriangleHeight">Height</label>
-        <input class="box--input" id="InputTriangleHeight" type="number">
-        <button class="box--button" type="button" onclick="calcularPerimetroTriangulo()">Get perimeter </button>
-        <button class="box--button" type="button" onclick="calcularAreaTriangulo()">Get area</button><span id="outputTriangulo"></span>
-      </form>
-    </section>
-    <section class="box">
-      <div class="box--title"><img src="../media/circle.png"/><span>Circle</span></div>
-      <div class="box--question"><span>What is the radio of your circle?</span></div>
-      <form class="box--form" action="">
-        <input class="box--input" id="InputCirculo" type="number"/>
-        <button class="box--button" type="button" onclick="calcularPerimetroCirculo()">Get perimeter </button>
-        <button class="box--button" type="button" onclick="calcularAreaCirculo()">Get area</button><span id="outputCirculo"></span>
-      </form>
-    </section>
+    <header class="main--header"><img class="header--logo" src="../media/geometry.png">
+      <h1 class="header--title">Geometry Bot</h1>
+    </header>
+    <p class="header--description">Calculate the area or perimeter automatically for this geometric figures</p>
+    <main class="main">
+      <section class="box">
+        <div class="box--title"><img src="../media/square.png"/><span>Square</span></div>
+        <div class="box--question"><span>How long is each side of your square?</span></div>
+        <form class="box--form" action="">
+          <input class="box--input" id="InputCuadrado" type="number"/>
+          <button class="box--button" type="button" onclick="calcularPerimetroCuadrado()">Get perimeter </button>
+          <button class="box--button" type="button" onclick="calcularAreaCuadrado()">Get area</button><span id="outputCuadrado"></span>
+        </form>
+      </section>
+      <section class="box">
+        <div class="box--title"><img src="../media/triangle.png"><span>Triangle</span></div>
+        <div class="box--question"><span>What are the measurements of your triangle?</span></div>
+        <form class="box--form" action="">
+          <label for="InputTriangleSideA">Side A </label>
+          <input class="box--input" id="InputTriangleSideA" type="number">
+          <label for="InputTriangleSideB">Side B</label>
+          <input class="box--input" id="InputTriangleSideB" type="number">
+          <label for="InputTriangleBase">Base</label>
+          <input class="box--input" id="InputTriangleBase" type="number">
+          <label for="InputTriangleHeight">Height</label>
+          <input class="box--input" id="InputTriangleHeight" type="number">
+          <button class="box--button" type="button" onclick="calcularPerimetroTriangulo()">Get perimeter </button>
+          <button class="box--button" type="button" onclick="calcularAreaTriangulo()">Get area</button><span id="outputTriangulo"></span>
+        </form>
+      </section>
+      <section class="box">
+        <div class="box--title"><img src="../media/circle.png"/><span>Circle</span></div>
+        <div class="box--question"><span>What is the radio of your circle?</span></div>
+        <form class="box--form" action="">
+          <input class="box--input" id="InputCirculo" type="number"/>
+          <button class="box--button" type="button" onclick="calcularPerimetroCirculo()">Get perimeter </button>
+          <button class="box--button" type="button" onclick="calcularAreaCirculo()">Get area</button><span id="outputCirculo"></span>
+        </form>
+      </section>
+    </main>
     <script src="../figuras.js"> </script>
   </body>
 </html>

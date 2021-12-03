@@ -26,31 +26,34 @@ html(lang="en")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet")
     body 
-        h1 Geometry Bot
-        p Calculare the area or perimeter automatically for this geometric figures
+        header.main--header
+            img(src="../media/geometry.png" class="header--logo") 
+            h1.header--title Geometry Bot
+        p.header--description Calculate the area or perimeter automatically for this geometric figures
         
-        +caja(square[0], square[1], square[2], square[3], square[4], square[5], square[6])
+        main.main
+            +caja(square[0], square[1], square[2], square[3], square[4], square[5], square[6])
+            
+            section.box
+                .box--title
+                    img(src="../media/triangle.png")
+                    span Triangle
+                .box--question
+                    span What are the measurements of your triangle?
+                form(class="box--form" action="")
+                        label(for="InputTriangleSideA") Side A 
+                        input(class="box--input" id="InputTriangleSideA" type="number") 
+                        label(for="InputTriangleSideB") Side B
+                        input(class="box--input" id="InputTriangleSideB" type="number")
+                        label(for="InputTriangleBase") Base
+                        input(class="box--input" id="InputTriangleBase" type="number")
+                        label(for="InputTriangleHeight") Height
+                        input(class="box--input" id="InputTriangleHeight" type="number") 
+                        button(class="box--button" type="button" onclick="calcularPerimetroTriangulo()") Get perimeter 
+                        button(class="box--button" type="button" onclick="calcularAreaTriangulo()") Get area
+                        span(id="outputTriangulo")
 
-        section.box
-            .box--title
-                img(src="../media/triangle.png")
-                span Triangle
-            .box--question
-                span What are the measurements of your triangle?
-            form(class="box--form" action="")
-                    label(for="InputTriangleSideA") Side A 
-                    input(class="box--input" id="InputTriangleSideA" type="number") 
-                    label(for="InputTriangleSideB") Side B
-                    input(class="box--input" id="InputTriangleSideB" type="number")
-                    label(for="InputTriangleBase") Base
-                    input(class="box--input" id="InputTriangleBase" type="number")
-                    label(for="InputTriangleHeight") Height
-                    input(class="box--input" id="InputTriangleHeight" type="number") 
-                    button(class="box--button" type="button" onclick="calcularPerimetroTriangulo()") Get perimeter 
-                    button(class="box--button" type="button" onclick="calcularAreaTriangulo()") Get area
-                    span(id="outputTriangulo")
-
-        +caja(circle[0], circle[1], circle[2], circle[3], circle[4], circle[5], circle[6])
+            +caja(circle[0], circle[1], circle[2], circle[3], circle[4], circle[5], circle[6])
     
 
         script(src="../figuras.js") 
