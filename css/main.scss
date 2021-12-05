@@ -1,5 +1,6 @@
 @import "./components/bootstrap_reboot";
 @import "./components/calculateSize";
+@import "./components/breakpoints";
 
 $color-principal: #00d185;
 $color-secundario: #000f0a;
@@ -29,9 +30,15 @@ body {
 }
 
 .header--description {
-    max-width: 750px;
-    margin: 0 10px 20px 15px;
+    width: 100%;
+    padding: 0 20px;
     font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+}
+
+.header--description p {
+    max-width: 350px;
 }
 
 .main {
@@ -45,7 +52,7 @@ body {
 .box {
     width: 90%;
     max-width: 350px;
-    padding: 15px;
+    padding: 20px;
     margin-bottom: 20px;
     background-color: $color-principal;
     border-radius: 1rem;
@@ -61,7 +68,51 @@ body {
     width: 50px;
 }
 
+.box--question {
+    margin: 10px 0;
+}
+
 .box--form {
     display: flex;
     flex-direction: column;
+}
+
+.box--input {
+    border: 4px solid $color-secundario;
+    border-radius: 0.5rem;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.box--input:focus {
+    outline: none;
+}
+
+.box--form label {
+    margin-bottom: 5px;
+}
+
+.box--buttons button {
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    color: $color-principal;
+    background-color: white;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.box--buttons button:nth-child(1) {
+    margin-right: 10px;
+}
+
+.box--form span {
+    min-height: 31px;
+    margin-top: 10px;
+    background-color: white;
+    color: $color-secundario;
+    padding: 5px;
+    border-radius: 0.5rem;
+    text-align: center;
 }

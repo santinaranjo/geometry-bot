@@ -454,6 +454,8 @@ output {
 [hidden] {
   display: none !important;
 }
+/* Media Queries Mixin
+**********************/
 body {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -485,9 +487,19 @@ body {
 }
 
 .header--description {
-  max-width: 750px;
-  margin: 0 10px 20px 15px;
+  width: 100%;
+  padding: 0 20px;
   font-size: 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header--description p {
+  max-width: 350px;
 }
 
 .main {
@@ -510,7 +522,7 @@ body {
 .box {
   width: 90%;
   max-width: 350px;
-  padding: 15px;
+  padding: 20px;
   margin-bottom: 20px;
   background-color: #00d185;
   border-radius: 1rem;
@@ -526,6 +538,10 @@ body {
   width: 50px;
 }
 
+.box--question {
+  margin: 10px 0;
+}
+
 .box--form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -534,4 +550,44 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.box--input {
+  border: 4px solid #000f0a;
+  border-radius: 0.5rem;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.box--input:focus {
+  outline: none;
+}
+
+.box--form label {
+  margin-bottom: 5px;
+}
+
+.box--buttons button {
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  color: #00d185;
+  background-color: white;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.box--buttons button:nth-child(1) {
+  margin-right: 10px;
+}
+
+.box--form span {
+  min-height: 31px;
+  margin-top: 10px;
+  background-color: white;
+  color: #000f0a;
+  padding: 5px;
+  border-radius: 0.5rem;
+  text-align: center;
 }
